@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "PreventScreenCaptureKit",
             dependencies: []),
-        .testTarget(
-            name: "PreventScreenCaptureKitTests",
-            dependencies: ["PreventScreenCaptureKit"]),
     ]
 )
