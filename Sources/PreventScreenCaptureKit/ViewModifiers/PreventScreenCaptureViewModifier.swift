@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct PreventScreenCaptureViewModifier: ViewModifier {
-    @available(iOS 13.0.0, *)
-    func body(content: Content) -> some View {
+public struct PreventScreenCaptureViewModifier: ViewModifier {
+    public func body(content: Content) -> some View {
         GeometryReader { reader in
             PreventScreenCaptureView(frame: .init(x: 0, y: 0, width: reader.size.width, height: reader.size.height)) {
                 content

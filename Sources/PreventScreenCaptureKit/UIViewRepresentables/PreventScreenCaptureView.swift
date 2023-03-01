@@ -9,8 +9,7 @@ import SwiftUI
 
 
 /// Wraps the swiftUI view into a UIKit's View and then then wraps into a UITextField
-@available(iOS 13.0, *)
-struct PreventScreenCaptureView<Content: View>: UIViewRepresentable {
+public struct PreventScreenCaptureView<Content: View>: UIViewRepresentable {
     private let content: UIView
 
     init(frame: CGRect, @ViewBuilder content: () -> Content) {
@@ -19,12 +18,12 @@ struct PreventScreenCaptureView<Content: View>: UIViewRepresentable {
         self.content.backgroundColor = .clear
     }
     
-    func makeUIView(context: Context) -> UIView {
+    public func makeUIView(context: Context) -> UIView {
         let preventableScrenshotView = UIView()
         preventableScrenshotView.addSubview(content)
         preventableScrenshotView.preventScreenCapture()
         return preventableScrenshotView
     }
 
-    func updateUIView(_ uiView: UIView, context: Context) { }
+    public func updateUIView(_ uiView: UIView, context: Context) { }
 }

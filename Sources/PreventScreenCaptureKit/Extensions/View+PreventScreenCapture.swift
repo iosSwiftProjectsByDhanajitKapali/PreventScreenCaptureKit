@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
-extension View {
+public extension View {
     func preventScreenCapture() -> some View {
         self.modifier(PreventScreenCaptureViewModifier())
     }
