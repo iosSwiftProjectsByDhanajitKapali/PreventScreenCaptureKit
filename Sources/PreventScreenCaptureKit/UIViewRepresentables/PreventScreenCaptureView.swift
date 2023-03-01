@@ -9,6 +9,7 @@ import SwiftUI
 
 
 /// Wraps the swiftUI view into a UIKit's View and then then wraps into a UITextField
+@available(iOS 13.0, *)
 public struct PreventScreenCaptureView<Content: View>: UIViewRepresentable {
     private let content: UIView
 
