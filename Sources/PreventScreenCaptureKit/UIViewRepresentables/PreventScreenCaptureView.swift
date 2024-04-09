@@ -22,7 +22,7 @@ public struct PreventScreenCaptureView<Content: View>: UIViewRepresentable {
     public func makeUIView(context: Context) -> UIView {
         let preventableScrenshotView = UIView()
         preventableScrenshotView.addSubview(content)
-        preventableScrenshotView.preventScreenCapture()
+        preventableScrenshotView.preventScreenshot(for: content)
         return preventableScrenshotView
     }
 
